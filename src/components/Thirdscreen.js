@@ -38,7 +38,7 @@ versi() {
             height: 200, 
             borderRadius: 150,
             marginVertical: 10}} 
-            source={require('../images/Logo.png')}/>
+            source={require('../images/Logo.jpg')}/>
         </TouchableOpacity>
         </View>
 

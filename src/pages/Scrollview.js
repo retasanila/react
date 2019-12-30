@@ -29,15 +29,15 @@ Actions.login();
       <View style={styles.container}>
         <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={false}>
           <View style={styles.firstView}>
-            <Text style={styles.headerText}>Reta Sanila</Text>
+            <Text style={styles.headerText}>Welcome To Nanabase</Text>
           </View>
 
           <View style={styles.secondView}>
-            <Text style={styles.headerText}>Bunga Mujahidah</Text>
+            <Text style={styles.headerText}>Find Your Own Books</Text>
           </View>
 
           <View style={styles.thirdView}>
-            <Text style={styles.headerText}>Informatika 5</Text>
+            <Text style={styles.headerText}>And Get Your New World</Text>
           </View>
 
           <View style={styles.forthView}>
@@ -45,7 +45,7 @@ Actions.login();
             height: 300, 
             borderRadius: 150,
             marginVertical: 20}} 
-            source={require('../images/Logo.png')}/>
+            source={require('../images/Logo2.jpg')}/>
             <TouchableOpacity style={styles.button} onPress={this.login}>
               <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>

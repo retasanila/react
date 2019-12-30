@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Image,
-
+  Alert,
   AppRegistry,  
   Platform
 } from 'react-native';
@@ -20,6 +20,22 @@ chat() {
     Actions.firstscreen();
   }
 
+alert() {
+    Alert.alert(
+    'Buy This Book??',
+    'Checkout Now',
+    [
+      {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
+      {
+        text: 'Cancel',
+        onPress: () => console.log('Cancel'),
+        style: 'cancel',
+      },
+      {text: 'OK', onPress: () => console.log('OK')},
+    ],
+    {cancelable: false},
+  );
+  }
   render() {
     return (
 
@@ -47,8 +63,8 @@ chat() {
             </TouchableOpacity>
             </View>
 
-            <View style={styles.nav}>
-            <TouchableOpacity>
+            <View style={styles.nav} >
+            <TouchableOpacity onPress={this.alert}>
             <Image
                 style={{width: 60, height: 60}}
                 source={require('../images/trolley.png')} />

@@ -14,7 +14,7 @@ export default class Logo extends Component<{}> {
         height: 130, 
         borderRadius: 80,
         marginVertical: 10}} 
-        source={require('../images/Logo.png')}/>
+        source={require('../images/Logo2.jpg')}/>
       <Text style={styles.logoText}>NANABASE</Text>
     </View>
     )

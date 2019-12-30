@@ -52,42 +52,32 @@ constructor(props) {
         harga: 'Rp.100.000,00'
       },
       {
-        img: require('../images/4.jpg'),
+        img: require('../images/10.jpg'),
         nama: 'Chocho Book',
         harga: 'Rp.100.000,00'
       },
       {
-        img: require('../images/1.jpg'),
+        img: require('../images/5.jpg'),
         nama: 'Chocho Book',
         harga: 'Rp.100.000,00'
       },
       {
-        img: require('../images/2.jpg'),
+        img: require('../images/6.jpg'),
         nama: 'Chocho Book',
         harga: 'Rp.100.000,00'
       },
       {
-        img: require('../images/3.jpg'),
+        img: require('../images/7.jpg'),
         nama: 'Chocho Book',
         harga: 'Rp.100.000,00'
       },
       {
-        img: require('../images/4.jpg'),
+        img: require('../images/8.jpg'),
         nama: 'Chocho Book',
         harga: 'Rp.100.000,00'
       },
       {
-        img: require('../images/1.jpg'),
-        nama: 'Chocho Book',
-        harga: 'Rp.100.000,00'
-      },
-      {
-        img: require('../images/2.jpg'),
-        nama: 'Chocho Book',
-        harga: 'Rp.100.000,00'
-      },
-      {
-        img: require('../images/3.jpg'),
+        img: require('../images/9.jpg'),
         nama: 'Chocho Book',
         harga: 'Rp.100.000,00'
       },
@@ -96,26 +86,36 @@ constructor(props) {
         nama: 'Chocho Book',
         harga: 'Rp.100.000,00'
       },
-      {
-        img: require('../images/1.jpg'),
-        nama: 'Chocho Book',
-        harga: 'Rp.100.000,00'
-      },
-      {
-        img: require('../images/2.jpg'),
-        nama: 'Chocho Book',
-        harga: 'Rp.100.000,00'
-      },
-      {
-        img: require('../images/3.jpg'),
-        nama: 'Chocho Book',
-        harga: 'Rp.100.000,00'
-      },
-      {
-        img: require('../images/4.jpg'),
-        nama: 'Chocho Book',
-        harga: 'Rp.100.000,00'
-      },
+      // {
+      //   img: require('../images/3.jpg'),
+      //   nama: 'Chocho Book',
+      //   harga: 'Rp.100.000,00'
+      // },
+      // {
+      //   img: require('../images/4.jpg'),
+      //   nama: 'Chocho Book',
+      //   harga: 'Rp.100.000,00'
+      // },
+      // {
+      //   img: require('../images/1.jpg'),
+      //   nama: 'Chocho Book',
+      //   harga: 'Rp.100.000,00'
+      // },
+      // {
+      //   img: require('../images/2.jpg'),
+      //   nama: 'Chocho Book',
+      //   harga: 'Rp.100.000,00'
+      // },
+      // {
+      //   img: require('../images/3.jpg'),
+      //   nama: 'Chocho Book',
+      //   harga: 'Rp.100.000,00'
+      // },
+      // {
+      //   img: require('../images/4.jpg'),
+      //   nama: 'Chocho Book',
+      //   harga: 'Rp.100.000,00'
+      // },
       
     ]
   };

@@ -12,6 +12,8 @@ import Profil from './components/Thirdscreen';
 import Version from './pages/Version';
 import Item from './pages/Item';
 
+import InsertUser from './pages/Version';
+
 export default class Routes extends Component<{}> {
 	render() {
 		return (
@@ -27,6 +29,7 @@ export default class Routes extends Component<{}> {
 		      <Scene key="thirdscreen" component={Profil} title="Thirdscreen" />
 		      <Scene key="version" component={Version} title="Version" />
 		      <Scene key="shop" component={Item} title="Item" />
+		      <Scene key="InsertUser" component={InsertUser} title="InsertUser" />
 		    </Stack>
 		  </Router>
 			)

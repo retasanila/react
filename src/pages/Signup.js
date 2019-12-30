@@ -5,43 +5,99 @@ import {
   View,
   StatusBar ,
   TouchableOpacity,
-  TextInput
+  TextInput,
+  Alert
 } from 'react-native';
-
 import Logo from '../components/Logo';
-import Form from '../components/Form';
-
 import {Actions} from 'react-native-router-flux';
 
-export default class Signup extends Component<{}> {
-
+export default class InputUsers extends Component<{}> {  
   login() {
   Actions.login();
   }
 
+  InputUsers() {
+  Actions.InputUsers();
+  }
+
+  constructor(props){
+    super(props)
+    this.state = {
+      TextInputEmail:'',
+      TextInputUsername:'',
+      TextInputPhone:'',
+      TextInputPassword:'',
+    }
+  }
+
+  InsertUsers= () => {
+    const {TextInputEmail} = this.state;
+    const {TextInputUsername} = this.state;
+    const {TextInputPhone} = this.state;
+    const {TextInputPassword} = this.state;
+
+    fetch('http://192.168.43.188/reactnative/insert.php',{
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: TextInputUsername,
+        email: TextInputEmail,
+        phone: TextInputPhone,
+        password: TextInputPassword,
+      })
+    }).then((response) => response.json())
+      .then((responseJson) => {
+        Alert.alert(responseJson);
+
+      }).catch((error) => {
+        console.error(error);
+      })
+  }
 
   render() {
     return (
       
       <View style={styles.container}>
         <Logo/> 
+          <TextInput style={styles.inputBox} 
+            underlineColorAndroid='rgba(0,0,0,0)' 
+            placeholder="Username"
+            placeholderTextColor="rgba(255,255,255,0.7)"
+            selectionColor="#fff"
+            onChangeText = {TextInputValue => this.setState({TextInputUsername: TextInputValue})}
+          />
+
             <TextInput style={styles.inputBox} 
             underlineColorAndroid='rgba(0,0,0,0)' 
             placeholder="Email"
             placeholderTextColor="rgba(255,255,255,0.7)"
             selectionColor="#fff"
             keyboardType="email-address"
-            onSubmitEditing={()=> this.password.focus()}
+            onChangeText = {TextInputValue => this.setState({TextInputEmail: TextInputValue})}
           />
 
           <TextInput style={styles.inputBox} 
             underlineColorAndroid='rgba(0,0,0,0)' 
             placeholder="Phone Number"
+            keyboardType="phone-pad"
             placeholderTextColor="rgba(255,255,255,0.7)"
-            ref={(input) => this.password = input}
+            onChangeText = {TextInputValue => this.setState({TextInputPhone: TextInputValue})}
           />
 
-          <Form type="Signup"/>
+          <TextInput style={styles.inputBox} 
+            underlineColorAndroid='rgba(0,0,0,0)' 
+            placeholder="Password"
+            secureTextEntry={true}
+            placeholderTextColor="rgba(255,255,255,0.7)"
+            onChangeText = {TextInputValue => this.setState({TextInputUsername: TextInputValue})}
+          />
+
+          <TouchableOpacity style={styles.button} onPress={this.InsertUsers}>
+          <Text style={styles.buttonText}>Signup</Text>
+          </TouchableOpacity>
 
         <View style={styles.signupTextCont}>
           <Text style={styles.signupText}>Already have an account??</Text>
@@ -91,5 +147,22 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 16,
     fontWeight: '500'
+  },
+
+  button: {
+    width: 300,
+    backgroundColor: '#321911',
+    borderRadius: 25,
+    marginVertical: 15,
+    paddingVertical: 13
+  },
+
+  buttonText: {
+    fontSize: 16,
+    fontWeight:'500',
+    color: '#ffffff',
+    textAlign: 'center'
+
   }
+
 });
